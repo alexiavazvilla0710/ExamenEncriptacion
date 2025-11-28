@@ -1,4 +1,6 @@
 //sacamos 8 en el examen, falta corregir si meten un numero
+//Codigo para examen final 
+//Alexia Vazquez, Ximena Casillas, Mateo Arias
 #include <iostream> //principal, el cual nos enseñó Caro
 #include <string> //se usa para poder utilizar palabras en el código
 using namespace std;
@@ -56,6 +58,7 @@ int main() {
     cout << "Mensaje descifrado: " << resultado << endl; //manda el mensaje correcto
     return 0;
 }
+
 
 
 
