@@ -52,8 +52,9 @@ int main() {
         resultado += descifrar(palabra); //se descifra
     }
 
-    cout << "Mensaje descifrado: " << resultado << endl; //manda el mensaje resuelto
+    cout << "Mensaje descifrado: " << resultado << endl; //manda el mensaje correcto
     return 0;
 }
+
 
 
