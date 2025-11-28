@@ -1,18 +1,18 @@
-#include <iostream>
-#include <string> //se usa para poder utilizar palabras en el cÛdigo
+#include <iostream> //principal, el cual nos ense√±√≥ Caro
+#include <string> //se usa para poder utilizar palabras en el c√≥digo
 using namespace std;
 
-// Se necesita un for para descubir la palabra de 2 en 2- esta es la funciÛn para las palabras
-string descifrar(string palabra) { // Esta funciÛn recibe una palabra y devolver· la palabra descifrada
+// Se necesita un for para descubir la palabra de 2 en 2- esta es la funci√≥n para las palabras
+string descifrar(string palabra) { // Esta funci√≥n recibe una palabra y devolver√° la palabra descifrada
     for (int i = 0; i < palabra.length() - 1; i += 2) {
     	//este es un ciclo for que recorre la palabra de 2n en 2 como 0-1, 2-3, 4-5, etc.
     	//.length es algo que usa c++ ppara saber cuantas letras tiene una palabra
-    	// la i empieza en 0, luego vale 2, 4 y asÌ sucesivamente
-        char temp = palabra[i]; //es pareccido a lo que hicimos con bubble sort donde guardamos temporalmente la letra en la posiciÛn i 
-        palabra[i] = palabra[i + 1]; //aqui se cambia la letra i por la letra que est· en la en i+1
-        palabra[i + 1] = temp; //y finalmente pone la letra guardada en i en la posiciÛn i+1
+    	// la i empieza en 0, luego vale 2, 4 y as√≠ sucesivamente
+        char temp = palabra[i]; //es pareccido a lo que hicimos con bubble sort donde guardamos temporalmente la letra en la posici√≥n i 
+        palabra[i] = palabra[i + 1]; //aqui se cambia la letra i por la letra que est√° en la en i+1
+        palabra[i + 1] = temp; //y finalmente pone la letra guardada en i en la posici√≥n i+1
     }
-    return palabra; //nada m·s devuelve la palabra descifrada
+    return palabra; //nada m√°s devuelve la palabra descifrada
 }
 
 //ahora vamos con el programa principal
@@ -21,11 +21,11 @@ int main() {
     cout << "Ingresa el mensaje cifrado: ";
     getline(cin, mensaje); //lo lee incluyendo los espacios
 
-    // ValidaciÛn: solo min˙sculas y espacios para que no haya ningun error o bug
+    // Validaci√≥n: solo min√∫sculas y espacios para que no haya ningun error o bug
     for (int i = 0; i < mensaje.length(); i++) { //se recorre cada letra del mensaje
         char c = mensaje[i]; //se toma la letra actual en i
         if (!((c >= 'a' && c <= 'z') || c == ' ')) {
-        	//si la letra NO est· entre 'a' y 'z' o no es espacio arroja el siguiente mensaje
+        	//si la letra NO est√° entre 'a' y 'z' o no es espacio arroja el siguiente mensaje
             cout << "Error: solo se permiten minusculas y espacios." << endl;
             return 0;
         }
@@ -47,7 +47,7 @@ int main() {
         }
     }
 
-    // ⁄ltima palabra si no terminÛ en espacio
+    // √öltima palabra si no termin√≥ en espacio
     if (palabra != "") {   //para la palabra pendiente
         resultado += descifrar(palabra); //se descifra
     }
@@ -55,4 +55,5 @@ int main() {
     cout << "Mensaje descifrado: " << resultado << endl; //manda el mensaje resuelto
     return 0;
 }
+
 
